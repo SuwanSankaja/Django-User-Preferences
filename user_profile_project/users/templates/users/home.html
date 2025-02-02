@@ -1,11 +1,183 @@
-
 {% extends 'users/base.html' %}
 {% block content %}
-    {% for user in users %}
-        <h1> {{user.name}} </h1>
-        <p> {{user.email}} </p>
-        <p> {{user.phone}} </p>
-        <p> {{user.password}} </p>
 
-    {% endfor %}
-{% endblock content%}
+<style>
+/* Global Styling */
+body {
+    background: #fafafa;
+    color: #333333;
+    margin-top: 5rem;
+    font-family: Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #444444;
+}
+
+ul {
+    margin: 0;
+}
+
+.bg-steel {
+    background-color: #5f788a;
+}
+
+.site-header .navbar-nav .nav-link {
+    color: #cbd5db;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+    color: #ffffff;
+}
+
+.site-header .navbar-nav .nav-link.active {
+    font-weight: 500;
+}
+
+/* Hero Section */
+.content-section {
+    background: #ffffff;
+    padding: 20px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-section p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #5f788a;
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #4a5f72;
+}
+
+/* Features Section */
+.features-section {
+    padding: 20px;
+    background: white;
+    border-radius: 3px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.features-section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.features-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    width: 32%;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 3px;
+    border: 1px solid #dddddd;
+    text-align: center;
+}
+
+.feature-card h3 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Call-to-Action Section */
+.cta-section {
+    background: #5f788a;
+    color: white;
+    padding: 20px;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.cta-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.cta-section p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.btn-secondary {
+    display: inline-block;
+    padding: 10px 15px;
+    background: white;
+    color: #5f788a;
+    text-decoration: none;
+    border-radius: 3px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-secondary:hover {
+    background: #dddddd;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .features-grid {
+        flex-direction: column;
+    }
+    .feature-card {
+        width: 100%;
+    }
+}
+</style>
+
+<div class="content-section hero-section">
+    <h1>Welcome to ProfileHub</h1>
+    <p>Your go-to platform for managing and showcasing your professional profile.</p>
+    <a href="{% url 'register' %}" class="btn-primary">Get Started</a>
+</div>
+
+<div class="content-section features-section">
+    <h2>Why Choose Us?</h2>
+    <div class="features-grid">
+        <div class="feature-card">
+            <h3>Easy Profile Management</h3>
+            <p>Create, edit, and update your profile effortlessly.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Share with Anyone</h3>
+            <p>Generate a public or private profile link.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Privacy Control</h3>
+            <p>Keep your data secure and control visibility.</p>
+        </div>
+    </div>
+</div>
+
+<div class="content-section cta-section">
+    <h2>Start Building Your Profile Today</h2>
+    <p>Join thousands of professionals showcasing their expertise.</p>
+    <a href="{% url 'register' %}" class="btn-secondary">Sign Up Now</a>
+</div>
+
+{% endblock content %}
