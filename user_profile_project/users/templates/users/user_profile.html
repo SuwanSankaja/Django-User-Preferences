@@ -1,26 +1,47 @@
-
 {% extends 'users/base.html' %}
 {% load crispy_forms_tags %}
 {% block content %}
 <div class="content-section">
-        <div class="media">
-          <img class="rounded-circle account-img" src="{{user.profile.image.url}}">
-          <div class="media-body">
+    <div class="media">
+        <img class="rounded-circle account-img" src="{{user.profile.image.url}}">
+        <div class="media-body">
             <h2 class="account-heading">{{user.username}}</h2>
             <p class="text-secondary">{{user.email}}</p>
-          </div>
         </div>
-        <form method="POST" enctype="multipart/form-data"> 
-          {% csrf_token %}
-          <fieldset class="form-group">
-              <legend class="border-bottom mb-4">Profile Info</legend>
-              {{ u_form | crispy }}
-              {{ p_form | crispy }}
-          </fieldset>
-          <div class="form-group">
-              <button class="btn btn-outline-info" type="submit">Update</button>
-          </div>
-      </form>
-      </div>
-
+    </div>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Profile Info</legend>
+            {{ u_form | crispy }}
+            {{ p_form | crispy }}
+            <div class="form-group">
+                <label for="id_notification_preference">Notification Preference</label>
+                <input type="checkbox" name="notification_preference" id="id_notification_preference" {% if user.profile.notification_preference %}checked{% endif %}>
+            </div>
+            <div class="form-group">
+                <label for="id_email_frequency">Email Frequency</label>
+                <select name="email_frequency" id="id_email_frequency">
+                    <option value="daily" {% if user.profile.email_frequency == 'daily' %}selected{% endif %}>Daily</option>
+                    <option value="weekly" {% if user.profile.email_frequency == 'weekly' %}selected{% endif %}>Weekly</option>
+                    <option value="monthly" {% if user.profile.email_frequency == 'monthly' %}selected{% endif %}>Monthly</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="id_profile_visibility">Profile Visibility</label>
+                <select name="profile_visibility" id="id_profile_visibility">
+                    <option value="private" {% if user.profile.profile_visibility == 'private' %}selected{% endif %}>Private</option>
+                    <option value="public" {% if user.profile.profile_visibility == 'public' %}selected{% endif %}>Public</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="id_data_sharing">Data Sharing</label>
+                <input type="checkbox" name="data_sharing" id="id_data_sharing" {% if user.profile.data_sharing %}checked{% endif %}>
+            </div>
+        </fieldset>
+        <div class="form-group">
+            <button class="btn btn-outline-info" type="submit">Update</button>
+        </div>
+    </form>
+</div>
 {% endblock content %}
