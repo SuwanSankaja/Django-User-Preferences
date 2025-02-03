@@ -112,4 +112,4 @@ Ensure you have the following installed:
 <img src="https://github.com/SuwanSankaja/Django-User-Preferences/blob/main/screenshots/login_page.png" width="700">
 
 ### User Preference Update Page
-<img src="https://github.com/SuwanSankaja/Django-User-Preferences/blob/main/screenshots/user_preference_update_page.png" width="800">
+<img src="https://github.com/SuwanSankaja/Django-User-Preferences/blob/main/screenshots/user_preference_update_page_updated.png" width="800">
