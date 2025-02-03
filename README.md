@@ -106,7 +106,7 @@ Ensure you have the following installed:
 <img src="https://github.com/SuwanSankaja/Django-User-Preferences/blob/main/screenshots/home_page.png" width="700">
 
 ### Register Page
-<img src="https://github.com/SuwanSankaja/Django-User-Preferences/blob/main/screenshots/signin_page.png" width="700">
+<img src="https://github.com/SuwanSankaja/Django-User-Preferences/blob/main/screenshots/register_updated.png" width="700">
 
 ### Login Page
 <img src="https://github.com/SuwanSankaja/Django-User-Preferences/blob/main/screenshots/login_page.png" width="700">
