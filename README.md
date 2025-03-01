@@ -103,13 +103,13 @@ Ensure you have the following installed:
 ---
 
 ### Home Page
-<img src="https://github.com/SuwanSankaja/Django-User-Preferences/blob/main/screenshots/home_page.png" width="700">
+<img src="https://filedn.eu/lVNP1DcGQUE5OPMMHbPaQeb/Jahan_AI_Django_User_Preference_Interface/home_page.png" width="700">
 
 ### Register Page
-<img src="https://github.com/SuwanSankaja/Django-User-Preferences/blob/main/screenshots/register_updated.png" width="700">
+<img src="https://filedn.eu/lVNP1DcGQUE5OPMMHbPaQeb/Jahan_AI_Django_User_Preference_Interface/register_updated.png" width="700">
 
 ### Login Page
-<img src="https://github.com/SuwanSankaja/Django-User-Preferences/blob/main/screenshots/login_page.png" width="700">
+<img src="https://filedn.eu/lVNP1DcGQUE5OPMMHbPaQeb/Jahan_AI_Django_User_Preference_Interface/login_page.png" width="700">
 
 ### User Preference Update Page
-<img src="https://github.com/SuwanSankaja/Django-User-Preferences/blob/main/screenshots/user_preference_update_page_updated.png" width="800">
+<img src="https://filedn.eu/lVNP1DcGQUE5OPMMHbPaQeb/Jahan_AI_Django_User_Preference_Interface/user_preference_update_page_updated.png" width="800">
